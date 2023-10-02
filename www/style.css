@@ -1,0 +1,96 @@
+html {
+	font-family: 'Caveat', cursive;
+	font-size: 1.7em;
+	color: #666;
+	-webkit-text-stroke: 1px rgba(0,0,0,0);
+	overflow-y: scroll;
+}
+	
+body {
+	background-image: url('gallery/background.jpg');
+	color: #333;
+	margin: 2em auto;
+	padding: 0 .5em;
+	max-width: 1000px;
+	min-width: 320px;
+}
+
+a {
+	color: #006aeb;
+	padding: 3px 1px;
+	text-decoration: none;
+}
+	
+a:hover, a:active, a:focus {
+	text-decoration: underline;
+	color: #02408b;
+	transition: color 0.5s ease;
+}
+
+#banner {
+	border-radius: 12px 12px 0 0;
+	background-color: rgb(146, 141, 141);
+}
+
+.flash {
+	color: white;
+	font-weight: bold;
+}
+
+h1 {
+	font-family: 'Caveat', cursive;
+	color: white;
+	font-size: 60px;
+	line-height: 121px;
+	margin: 0;
+	padding-left: 4%;
+	background: url('gallery/to_do_logo_bigger.png') no-repeat 95%;
+	background-size: 80px auto;
+	text-shadow: 3px 5px 4px black;
+}
+	
+@media (max-width: 600px) {
+	h1 {
+		background: none;
+		font-size: 40px;
+	}
+}
+
+#content {
+	background: rgb(240, 238, 238);
+	border: 1px solid #eff4f7;
+	border-radius: 0 0 12px 12px;
+	padding: 10px 4%;
+	overflow: hidden;
+}
+
+h2 {
+	font: inherit;
+	padding: 1.2em 0;
+	margin: 0;
+}
+
+img {
+	border: none;
+	float: left;
+	margin: 0 0;
+}
+
+td {
+	padding: 1.2em 1.5em;
+}
+
+.delete {
+	display: flex;
+	justify-content: center;
+}
+
+.done {
+	display: flex;
+	justify-content: center;
+}
+
+.add {
+	display: flex;
+	justify-content: center;
+}

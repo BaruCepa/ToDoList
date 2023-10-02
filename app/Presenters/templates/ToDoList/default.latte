@@ -1,0 +1,46 @@
+{block content}
+<div id="banner">
+	<h1 n:block=title>To Do List</h1>
+</div>
+
+<div id="content">
+	<table>
+		<tr>
+			<th>Název</th>
+			<th>Popis</th>
+			<th>Hotovo</th>
+			<th>Akce</th>
+		</tr>
+
+		{foreach $items as $item}
+			<tr>
+				<td>{$item->name}</td>
+				<td>{$item->description}</td>
+				<td>
+					{if $item->is_done}
+					Ano
+					{else}
+					Ne
+					{/if}
+				</td>
+				<td>
+					<div class="delete">
+						<a href="/remove/{$item->id}"><img src="{$basePath}/gallery/delete.png" height=30px width=30px>Smazat</a>
+					</div>
+					{if !$item->is_done}
+						<div class="done">
+							<a href="/done/{$item->id}"><img src="{$basePath}/gallery/done.png" height=30px width=30px>Hotovo</a>
+						</div>
+					{/if}
+				</td>
+			</tr>
+		{else}
+			<tr><td colspan="3">Nenalezena žádná data</td></tr>
+		{/foreach}
+
+	</table>
+
+	<div class="add">
+		<a href="/add"><img src="{$basePath}/gallery/add.png" height=30px width=30px>Přidat nový</a>
+	</div>
+</div>
